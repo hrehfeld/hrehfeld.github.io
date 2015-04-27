@@ -36,29 +36,36 @@ html {
 }
 
 body {
-    padding-left: 2em;
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 14pt;
-    line-height: 1.5;
     color: #111;
     background-color: #fff;
+    background-size: 
 }
 
 /* Responsive
    -------------------------------------------------- */
+body {
+    padding-left: 1.5em;
+    padding-right: 1em;
+    font-size: 14pt;
+    line-height: 1.5;
+}
 
-@media (min-width: 768px) {
+
+@media screen and (min-width: 768px) {
     /* Increase body padding and font-sizes */
     body {
 /*        padding: 30px; */
-        font-size: 18pt;
+        padding-left: 2em;
+        font-size: 14pt;
         line-height: 1.75;
     }
 }
 
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
     body {
-/*        padding: 30px; */
+        padding-left: 3em;
+        font-size: 16pt;
     }
 }
 
@@ -78,12 +85,17 @@ h1, h2, h3 {
     text-rendering: optimizeLegibility;
 }
 
+/* disable org mode stuff */
+.org-section-number {
+    display: none;
+}
+
 h1 {
-    font-size: 200%;
+    font-size: 150%;
 }
 
 h2 {
-    font-size: 150%;
+    font-size: 125%;
 }
 ul, ol {
     padding: 0;
@@ -127,7 +139,7 @@ a {
     font-weight: inherit;
     line-height: inherit;
     color: #00b;
-    text-decoration: none;
+/*    text-decoration: none;*/
 }
 a:hover {
     text-decoration: underline;
@@ -155,17 +167,47 @@ table th.right, table td.right {
 }
 /* head */
 .masthead {
+    margin: 0;
+    margin-bottom: 2em;
+    padding: 0;
     color: #888;
+
+    font-family: sans-serif;
 }
+.masthead ::before
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 1.75em;
+    background-color: #000;
+    z-index: -1;
+    content: " ";
+}
+.masthead h1 {
+    font-family: sans-serif;
+}
+
 .masthead a {
-    color: #333;
+    color: #fff;
+    text-decoration: none;
 }
 .masthead ul {
     list-style: none;
 }
 .masthead li {
     display: inline-block;
+    margin-right: 2em;
 }
+
+#nav-categories {
+    font-size: 75%;
+}
+#site-meta {
+    font-size: 50%;
+}
+
 /* searchform*/
 #searchform {
 }
@@ -205,11 +247,6 @@ table th.right, table td.right {
 .post {
     position: relative;
 }
-.post:after {
-    display: block;
-    content: "----------------------------------------------------------------";
-    color: #ccc;
-}
 .post img {
     max-width: 100%;
 }
@@ -233,12 +270,6 @@ table th.right, table td.right {
 }
 .post-info + .post-info:before {
     content: "\2223 \00a0";
-}
-.post-meta:after {
-    content: "----------------------------------------------------------------";
-    display: block;
-    margin-top: -1px;
-    color: #ccc;
 }
 .footer {
     margin: 80px 0 0;
