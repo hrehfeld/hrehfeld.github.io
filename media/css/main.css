@@ -329,6 +329,7 @@ table th.right, table td.right {
     margin: 0;
 }
 .footer li {
-    display: inline;
+    display: inline-block;
+    margin-right: 1em;
 }
 
