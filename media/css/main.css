@@ -47,7 +47,7 @@ body {
 body {
     padding-left: 1.5em;
     padding-right: 1em;
-    font-size: 14pt;
+    font-size: 12pt;
     line-height: 1.5;
 }
 
@@ -57,7 +57,7 @@ body {
     body {
 /*        padding: 30px; */
         padding-left: 2em;
-        font-size: 14pt;
+        font-size: 12pt;
         line-height: 1.75;
     }
 }
@@ -65,7 +65,7 @@ body {
 @media screen and (min-width: 1024px) {
     body {
         padding-left: 3em;
-        font-size: 16pt;
+        font-size: 14pt;
     }
 }
 
@@ -91,11 +91,15 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 150%;
+    font-size: 175%;
 }
 
 h2 {
     font-size: 125%;
+}
+
+h3 {
+    font-size: 100%;
 }
 ul, ol {
     padding: 0;
