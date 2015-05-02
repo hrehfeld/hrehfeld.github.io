@@ -170,7 +170,6 @@ body {
 }
 header {
     margin: 0;
-    margin-bottom: 2em;
     padding: 0;
     color: #888;
 
@@ -189,6 +188,10 @@ header {
 /*     z-index: -1; */
 /*     content: " "; */
 /* } */
+
+nav {
+    margin: 0
+}
 
 nav a {
     color: #000;
