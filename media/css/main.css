@@ -267,6 +267,7 @@ header img.avatar {
 
 article {
     position: relative;
+    margin-bottom: 4em;
 }
 article img {
     max-width: 100%;
