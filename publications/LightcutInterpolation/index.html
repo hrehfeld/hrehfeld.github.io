@@ -31,12 +31,26 @@
 <dd>Proceedings of the ACM SIGGRAPH Symposium on <a href="http://www.highperformancegraphics.org/2016/">High Performance Graphics 2016</a></dd>
 </dl>
 <h2 id="org-header-1"><span class="org-section-number">1</span>Downloads</h2>
-<ul><li><a href="/publications/LightcutInterpolation/LightcutInterpolation_HaukeRehfeld_hpg2016_preprint.pdf">Paper</a></li>
+<ul><li><a href="/publications/LightcutInterpolation/LightcutInterpolation_HaukeRehfeld_hpg2016_preprint.pdf">Paper</a><p></p>
+</li>
 </ul>
-<h2 id="org-header-2"><span class="org-section-number">2</span>Abstract</h2>
-<p>Many-light rendering methods replace multi-bounce light transport with direct lighting from many virtual point light sources to allow for simple and efficient computation of global illumination. Lightcuts build a hierarchy over virtual lights, so that surface points can be shaded with a sublinear number of lights while minimizing error. However, the original algorithm needs to run on every shading point of the rendered image. It is well known that the performance of Lightcuts can be improved by exploiting the coherence between individual cuts. We propose a novel approach where we invest into the initial lightcut creation at representative cache records, and then directly interpolate the input lightcuts themselves as well as per-cluster visibility for neighboring shading points. This allows us to improve upon the performance of the original Lightcuts algorithm by a factor of 4−8 compared to an optimized GPU-implementation of Lightcuts,while introducing only a small additional approximation error.  The GPU-implementation of our technique enables us to create previews of Lightcuts-based global illumination renderings. </p>
+<h2 id="org-header-2"><span class="org-section-number">2</span>Citation</h2>
+<pre class="org-prettyprint"><code class="org-language-bibtex">@inproceedings{
+    hrehfeld:2016:lci
+    , author = {Hauke Rehfeld and Carsten Dachsbacher}
+    , title = {Lightcuts Interpolation}
+    , booktitle = {High Performance Graphics 2016}
+    , series = {HPG2016}
+    , year = {2016}
+    , publisher = {ACM}
+    , url = {<a href="http://www.haukerehfeld.de/publications/LightcutInterpolation/">http://www.haukerehfeld.de/publications/LightcutInterpolation/</a>}
+    }</code>
+</pre>
 <p><img src="/publications/LightcutInterpolation/teaser_sponza.jpg" alt="./teaser_sponza.jpg" title="./teaser_sponza.jpg">
-<img src="/publications/LightcutInterpolation/teaser_cut.png" alt="./teaser_cut.png" title="./teaser_cut.png"></p>
+<img src="/publications/LightcutInterpolation/teaser_cut.png" alt="./teaser_cut.png" title="./teaser_cut.png">
+</p>
+<h2 id="org-header-3"><span class="org-section-number">3</span>Abstract</h2>
+<p>Many-light rendering methods replace multi-bounce light transport with direct lighting from many virtual point light sources to allow for simple and efficient computation of global illumination. Lightcuts build a hierarchy over virtual lights, so that surface points can be shaded with a sublinear number of lights while minimizing error. However, the original algorithm needs to run on every shading point of the rendered image. It is well known that the performance of Lightcuts can be improved by exploiting the coherence between individual cuts. We propose a novel approach where we invest into the initial lightcut creation at representative cache records, and then directly interpolate the input lightcuts themselves as well as per-cluster visibility for neighboring shading points. This allows us to improve upon the performance of the original Lightcuts algorithm by a factor of 4−8 compared to an optimized GPU-implementation of Lightcuts,while introducing only a small additional approximation error.  The GPU-implementation of our technique enables us to create previews of Lightcuts-based global illumination renderings. </p>
 
     </article>
 
