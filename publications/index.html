@@ -131,6 +131,34 @@
       </article>
       <article>
         <h2>
+            <a href="/publications/ObjectOrderRayTracing">
+          Object-order ray tracing for fully dynamic scenes
+            </a>
+        </h2>
+
+          <dl><dt>Authors</dt>
+<dd><a href="http://cg.ivd.kit.edu/zirr">Tobias Zirr</a>, Hauke Rehfeld and <a href="http://cg.ivd.kit.edu/dachsbacher">Carsten Dachsbacher</a></dd>
+<dt>Published</dt>
+<dd>Book Chapter in GPU Pro 5 (Editor Wolfgang Engel)</dd>
+</dl>
+<h2 id="org-header-1"><span class="org-section-number">1</span>Citation</h2>
+<pre class="org-prettyprint"><code class="org-language-bibtex">@incollection{Zirr13,
+    author    = {Tobias Zirr and Hauke Rehfeld and Carsten Dachsbacher},
+    title     = {Object-order ray tracing for fully dynamic scenes},
+    editor    = {Wolfgang Engel},
+    booktitle = {GPU Pro 5},
+    year      = {2013},
+    publisher = {A K Peters/CRC Press},
+    address   = {Boca Raton, FL, USA},
+}</code>
+</pre>
+<p><img src="/publications/ObjectOrderRayTracing/teaser.png" alt="./teaser.png" title="./teaser.png"></p>
+<h2 id="org-header-2"><span class="org-section-number">2</span>Abstract</h2>
+<p>This article presents a method for tracing incoherent secondary rays that integrates well with existing rasterization-based real-time rendering engines. In particular, it requires only linear scene access and supports fully dynamic scene geometry. All parts of the method that work with scene geometry are implemented in the standard graphics pipeline. Thus, the ability to generate, transform and animate geometry via shaders is fully retained. Our method does not distinguish between static and dynamic geometry. Moreover, shading can share the same material system that is used in a deferred shading rasterizer. Consequently, our method allows for a unified rendering architecture that supports both rasterization and ray tracing. The more expensive ray tracing can easily be restricted to complex phenomena that require it, such as reflections and refractions on arbitrarily shaped scene geometry. Steps in rendering that do not require the tracing of incoherent rays with arbitrary origins can be dealt with using rasterization as usual.</p>
+
+      </article>
+      <article>
+        <h2>
             <a href="/publications">
           Publications
             </a>
