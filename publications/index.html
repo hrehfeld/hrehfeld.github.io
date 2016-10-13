@@ -3,178 +3,68 @@
   <head>
     <title>Publications</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Hauke Rehfeld" />
-	<meta name="viewport" content="width=device-width, initial-sclae=1" />
+    <meta name="author" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/media/css/main.css" type="text/css">
   	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Playfair+Display">
   	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
   </head>
-<body>
-      <header>
-        <nav>
-          <h1><a href="/">Hauke Rehfeld</a></h1>
-          <ul>
-            <li><a href="/publications">Publications</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/art">Art</a></li>
-            <li><a href="/photography">Photography</a></li>
-          </ul>
-          </nav>
-        </header>
-
-  <section> 
+  <body>
+    <header>
+      <nav>
+        <h1><a href="/">Hauke Rehfeld</a></h1>
+        <ul>
+          <li><a href="/publications/">Publications</a></li>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/art/">Art</a></li>
+          <li><a href="/photography/">Photography</a></li>
+        </ul>
+        </nav>
+      </header>  <section>   
 	<h1>Publications</h1>
       <article>
         <h2>
-            <a href="/publications/LightcutInterpolation">
-          Lightcut Interpolation
-            </a>
+          <a href="/publications/LightcutInterpolation">
+			Lightcut Interpolation
+          </a>
         </h2>
-
-          <dl><dt>Authors</dt>
-<dd>Hauke Rehfeld and <a href="http://cg.ivd.kit.edu/dachsbacher">Carsten Dachsbacher</a></dd>
-<dt>Published</dt>
-<dd>Proceedings of the ACM SIGGRAPH Symposium on <a href="http://www.highperformancegraphics.org/2016/">High Performance Graphics 2016</a></dd>
-</dl>
-<h2 id="org-header-1"><span class="org-section-number">1</span>Downloads</h2>
-<ul><li><a href="/publications/LightcutInterpolation/LightcutInterpolation_HaukeRehfeld_hpg2016_preprint.pdf">Paper</a><p></p>
-</li>
-</ul>
-<h2 id="org-header-2"><span class="org-section-number">2</span>Citation</h2>
-<pre class="org-prettyprint"><code class="org-language-bibtex">@inproceedings{
-    hrehfeld:2016:lci
-    , author = {Hauke Rehfeld and Carsten Dachsbacher}
-    , title = {Lightcuts Interpolation}
-    , booktitle = {High Performance Graphics 2016}
-    , series = {HPG2016}
-    , year = {2016}
-    , publisher = {ACM}
-    , url = {<a href="http://www.haukerehfeld.de/publications/LightcutInterpolation/">http://www.haukerehfeld.de/publications/LightcutInterpolation/</a>}
-    }</code>
-</pre>
-<p><img src="/publications/LightcutInterpolation/teaser_sponza.jpg" alt="./teaser_sponza.jpg" title="./teaser_sponza.jpg">
-<img src="/publications/LightcutInterpolation/teaser_cut.png" alt="./teaser_cut.png" title="./teaser_cut.png">
-</p>
-<h2 id="org-header-3"><span class="org-section-number">3</span>Abstract</h2>
-<p>Many-light rendering methods replace multi-bounce light transport with direct lighting from many virtual point light sources to allow for simple and efficient computation of global illumination. Lightcuts build a hierarchy over virtual lights, so that surface points can be shaded with a sublinear number of lights while minimizing error. However, the original algorithm needs to run on every shading point of the rendered image. It is well known that the performance of Lightcuts can be improved by exploiting the coherence between individual cuts. We propose a novel approach where we invest into the initial lightcut creation at representative cache records, and then directly interpolate the input lightcuts themselves as well as per-cluster visibility for neighboring shading points. This allows us to improve upon the performance of the original Lightcuts algorithm by a factor of 4−8 compared to an optimized GPU-implementation of Lightcuts,while introducing only a small additional approximation error.  The GPU-implementation of our technique enables us to create previews of Lightcuts-based global illumination renderings. </p>
-
+        <p>Hauke Rehfeld and <a href="http://cg.ivd.kit.edu/dachsbacher">Carsten Dachsbacher</a></p>
+        <p>Proceedings of the ACM SIGGRAPH Symposium on <a href="http://www.highperformancegraphics.org/2016/">High Performance Graphics 2016</a></p>
       </article>
       <article>
         <h2>
-            <a href="/publications/ClusteredPreconvolvedRadianceCaching">
-          Clustered Pre-convolved Radiance Caching
-            </a>
+          <a href="/publications/ClusteredPreconvolvedRadianceCaching">
+			Clustered Pre-convolved Radiance Caching
+          </a>
         </h2>
-
-          <dl><dt>Authors</dt>
-<dd>Hauke Rehfeld, <a href="http://cg.ivd.kit.edu/zirr">Tobias Zirr</a> and <a href="http://cg.ivd.kit.edu/dachsbacher">Carsten Dachsbacher</a></dd>
-<dt>Published</dt>
-<dd>Eurographics Symposium on Parallel Graphics and Visualization 2014</dd>
-</dl>
-<h2 id="org-header-1"><span class="org-section-number">1</span>Downloads</h2>
-<ul><li><a href="/publications/ClusteredPreconvolvedRadianceCaching/ClusteredPreconvolvedRC_HaukeRehfeld_EGPGV_2014_preprint.pdf">Paper</a><p></p>
-</li>
-</ul>
-<h2 id="org-header-2"><span class="org-section-number">2</span>Citation</h2>
-<pre class="org-prettyprint"><code class="org-language-bibtex">@inproceedings{
-    hrehfeld:2014:cpcrc
-    , author = {Hauke Rehfeld and Tobias Zirr and Carsten Dachsbacher}
-    , title = {Clustered Pre-convolved Radiance Caching}
-    , booktitle = {Eurographics Symposium on Parallel Graphics and Visualization}
-    , series = {EGPGV14}
-    , year = {2014}
-    , publisher = {Eurographics Association}
-    }</code>
-</pre>
-<p><img src="/publications/ClusteredPreconvolvedRadianceCaching/teaser2.png" alt="./teaser2.png" title="./teaser2.png"></p>
-<h2 id="org-header-3"><span class="org-section-number">3</span>Abstract</h2>
-<p>We present a scalable method for rendering indirect illumination in diffuse and glossy scenes. Our method builds on pre-convolved radiance caching (RC), which enables reusing the incident radiance computed at a surface point for its neighborhood. Our contributions include efficient and robust generation of these RCs based on a pre-filtered voxel representation that stores scene-geometry and surface illumination. In addition, we describe a distribution strategy that places the RCs according to screen-space clusters to ensure all pixels have valid radiance data when evaluating indirect illumination. The results demonstrate the scalability of our method and analyze the relation between render quality, surface glossiness and computation time, which depends on the number of caches and their resolution.</p>
-
+        <p>Hauke Rehfeld, <a href="http://cg.ivd.kit.edu/zirr">Tobias Zirr</a> and <a href="http://cg.ivd.kit.edu/dachsbacher">Carsten Dachsbacher</a></p>
+        <p>Eurographics Symposium on Parallel Graphics and Visualization 2014</p>
       </article>
       <article>
         <h2>
-            <a href="/publications/ProgressiveVisibilityCaching">
-          Progressive Visibility Caching for Fast Indirect Illumination
-            </a>
+          <a href="/publications/ProgressiveVisibilityCaching">
+			Progressive Visibility Caching for Fast Indirect Illumination
+          </a>
         </h2>
-
-          <dl><dt>Authors</dt>
-<dd>Justus Ulbrich, <a href="http://drz.disneyresearch.com/~jnovak/">Jan Novak</a>, Hauke Rehfeld and <a href="http://cg.ivd.kit.edu/dachsbacher">Carsten Dachsbacher</a></dd>
-<dt>Published</dt>
-<dd>Proceedings of International Workshop on Vision, Modeling, and Visualization (VMV'13)</dd>
-</dl>
-<h2 id="org-header-1"><span class="org-section-number">1</span>Downloads</h2>
-<ul><li><a href="/publications/ProgressiveVisibilityCaching/ProgressiveVisibilityCaching.pdf">Paper</a></li>
-<li><a href="/publications/ProgressiveVisibilityCaching/PVCFID_supplementary.pdf">Supplementals</a><p></p>
-</li>
-</ul>
-<h2 id="org-header-2"><span class="org-section-number">2</span>Citation</h2>
-<pre class="org-prettyprint"><code class="org-language-bibtex">@inproceedings{Ulbrich2013PVC,
-  title     = {Progressive Visibility Caching for Fast Indirect Illumination},
-  author    = {Justus Ulbrich and Jan Nov{\'a}k and Hauke Rehfeld and Carsten Dachsbacher},
-  booktitle = {Proceedings of the Vision, Modeling, and Visualization Workshop},
-  editor    = {Michael M. Bronstein and Jean Favre and Kai Hormann},
-  year      = {2013},
-  pages     = {203--210},
-  location  = {Lugano, Switzerland},
-  publisher = {Eurographics Association}
-}</code>
-</pre>
-<p><img src="/publications/ProgressiveVisibilityCaching/teaser.png" alt="./teaser.png" title="./teaser.png"></p>
-<p>Our visibility caching significantly speeds up tracing of secondary rays, here from 0.15 MRays/s (reference) to 0.70 MRays/s (with the visibility cache). The images were rendered using path tracing where some of the rays (highlighted by green in the illustrations; solid and dashed lines represent path segments and shadow rays, resp.) were traced using our visibility cache with 2000 shadow maps achieving 4.7× higher throughput of secondary rays per second.</p>
-<h2 id="org-header-3"><span class="org-section-number">3</span>Abstract</h2>
-<p>Rendering realistic images requires exploring the vast space of all possible paths that light can take between emitters and receivers. Thanks to the advances in rendering we can tackle this problem using different algorithms; but in general, we will likely be evaluating many expensive visibility queries. In this paper, we leverage the observation that certain kinds of visibility calculations do not need to be resolved exactly and results can be shared efficiently among similar queries. We present a visibility caching algorithm that significantly accelerates computation of diffuse and glossy inter-reflections. By estimating the visibility correlation between surface points, the cache automatically adapts to the scene geometry, placing more cache records in areas with rapidly changing visibility. We demonstrate that our approach is most suitable for progressive algorithms delivering approximate but fast previews as well as high quality converged results.</p>
-<h2 id="org-header-4"><span class="org-section-number">4</span>Video</h2>
-<video src="/publications/ProgressiveVisibilityCaching/PVCFID_video.mp4" controls="">
- <a href="/publications/ProgressiveVisibilityCaching/PVCFID_video.mp4">Download</a>
-</video>
+        <p>Justus Ulbrich, <a href="http://drz.disneyresearch.com/~jnovak/">Jan Novak</a>, Hauke Rehfeld and <a href="http://cg.ivd.kit.edu/dachsbacher">Carsten Dachsbacher</a></p>
+        <p>Proceedings of International Workshop on Vision, Modeling, and Visualization (VMV’13)</p>
       </article>
       <article>
         <h2>
-            <a href="/publications/ObjectOrderRayTracing">
-          Object-order ray tracing for fully dynamic scenes
-            </a>
+          <a href="/publications/ObjectOrderRayTracing">
+			Object-order Ray Tracing for fully Dynamic Scenes
+          </a>
         </h2>
-
-          <dl><dt>Authors</dt>
-<dd><a href="http://cg.ivd.kit.edu/zirr">Tobias Zirr</a>, Hauke Rehfeld and <a href="http://cg.ivd.kit.edu/dachsbacher">Carsten Dachsbacher</a></dd>
-<dt>Published</dt>
-<dd>Book Chapter in GPU Pro 5 (Editor Wolfgang Engel)</dd>
-</dl>
-<h2 id="org-header-1"><span class="org-section-number">1</span>Citation</h2>
-<pre class="org-prettyprint"><code class="org-language-bibtex">@incollection{Zirr13,
-    author    = {Tobias Zirr and Hauke Rehfeld and Carsten Dachsbacher},
-    title     = {Object-order ray tracing for fully dynamic scenes},
-    editor    = {Wolfgang Engel},
-    booktitle = {GPU Pro 5},
-    year      = {2013},
-    publisher = {A K Peters/CRC Press},
-    address   = {Boca Raton, FL, USA},
-}</code>
-</pre>
-<p><img src="/publications/ObjectOrderRayTracing/teaser.png" alt="./teaser.png" title="./teaser.png"></p>
-<h2 id="org-header-2"><span class="org-section-number">2</span>Abstract</h2>
-<p>This article presents a method for tracing incoherent secondary rays that integrates well with existing rasterization-based real-time rendering engines. In particular, it requires only linear scene access and supports fully dynamic scene geometry. All parts of the method that work with scene geometry are implemented in the standard graphics pipeline. Thus, the ability to generate, transform and animate geometry via shaders is fully retained. Our method does not distinguish between static and dynamic geometry. Moreover, shading can share the same material system that is used in a deferred shading rasterizer. Consequently, our method allows for a unified rendering architecture that supports both rasterization and ray tracing. The more expensive ray tracing can easily be restricted to complex phenomena that require it, such as reflections and refractions on arbitrarily shaped scene geometry. Steps in rendering that do not require the tracing of incoherent rays with arbitrary origins can be dealt with using rasterization as usual.</p>
-
-      </article>
-      <article>
-        <h2>
-            <a href="/publications">
-          Publications
-            </a>
-        </h2>
-
-          
+        <p><a href="http://cg.ivd.kit.edu/zirr">Tobias Zirr</a>, Hauke Rehfeld and <a href="http://cg.ivd.kit.edu/dachsbacher">Carsten Dachsbacher</a></p>
+        <p>Book Chapter in GPU Pro 5 (Editor: Wolfgang Engel)</p>
       </article>
   </section>
-
-      <footer>
-        <ul>
-          <li><a href="/impressum/">Impressum</a></li>
-          <li><a href="/impressum/datenschutz/">Datenschutzerklärung</a></li>
-          
-        </ul>
-      </footer>
-    </body>
-  </html>
-
+	<footer>
+      <ul>
+        <li><a href="/impressum/">Impressum</a></li>
+        <li><a href="/impressum/datenschutz/">Datenschutzerklärung</a></li>
+      </ul>
+    </footer>
+	
+  </body>
+</html>

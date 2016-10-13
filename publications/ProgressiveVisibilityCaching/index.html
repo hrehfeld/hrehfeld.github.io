@@ -1,69 +1,63 @@
 <!DOCTYPE html>
 <html lang="en-us">
-    <head>
-      <title>Progressive Visibility Caching For Fast Indirect Illumination</title>
-      <meta charset="utf-8" />
-      <meta name="author" content="Hauke Rehfeld" />
-  	<meta name="viewport" content="width=device-width, initial-sclae=1" />
-      <link rel="stylesheet" href="/media/css/main.css" type="text/css">
-    	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Playfair+Display">
-    	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
-    </head>
+  <head>
+    <title>Progressive Visibility Caching for Fast Indirect Illumination</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Proceedings of International Workshop on Vision, Modeling, and Visualization (VMV’13)" />
+    <link rel="stylesheet" href="/media/css/main.css" type="text/css">
+  	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Playfair+Display">
+  	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
+  </head>
   <body>
-        <header>
-          <nav>
-            <h1><a href="/">Hauke Rehfeld</a></h1>
-            <ul>
-              <li><a href="/publications">Publications</a></li>
-              <li><a href="/projects">Projects</a></li>
-              <li><a href="/art">Art</a></li>
-              <li><a href="/photography">Photography</a></li>
-            </ul>
-            </nav>
-          </header>
-
-    <article>
-      <h1>Progressive Visibility Caching for Fast Indirect Illumination</h1>
-
-      <dl><dt>Authors</dt>
-<dd>Justus Ulbrich, <a href="http://drz.disneyresearch.com/~jnovak/">Jan Novak</a>, Hauke Rehfeld and <a href="http://cg.ivd.kit.edu/dachsbacher">Carsten Dachsbacher</a></dd>
-<dt>Published</dt>
-<dd>Proceedings of International Workshop on Vision, Modeling, and Visualization (VMV'13)</dd>
-</dl>
-<h2 id="org-header-1"><span class="org-section-number">1</span>Downloads</h2>
-<ul><li><a href="/publications/ProgressiveVisibilityCaching/ProgressiveVisibilityCaching.pdf">Paper</a></li>
-<li><a href="/publications/ProgressiveVisibilityCaching/PVCFID_supplementary.pdf">Supplementals</a><p></p>
-</li>
+    <header>
+      <nav>
+        <h1><a href="/">Hauke Rehfeld</a></h1>
+        <ul>
+          <li><a href="/publications/">Publications</a></li>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/art/">Art</a></li>
+          <li><a href="/photography/">Photography</a></li>
+        </ul>
+        </nav>
+      </header><article>
+  <h1>Progressive Visibility Caching for Fast Indirect Illumination</h1>
+  <p>Justus Ulbrich, <a href="http://drz.disneyresearch.com/~jnovak/">Jan Novak</a>, Hauke Rehfeld and <a href="http://cg.ivd.kit.edu/dachsbacher">Carsten Dachsbacher</a></p>
+  <p>Proceedings of International Workshop on Vision, Modeling, and Visualization (VMV’13)</p>
+  <h1 id="downloads">Downloads</h1>
+<ul>
+<li><a href="./ProgressiveVisibilityCaching.pdf">Paper</a></li>
+<li><em>Supplementals</em></li>
 </ul>
-<h2 id="org-header-2"><span class="org-section-number">2</span>Citation</h2>
-<pre class="org-prettyprint"><code class="org-language-bibtex">@inproceedings{Ulbrich2013PVC,
-  title     = {Progressive Visibility Caching for Fast Indirect Illumination},
-  author    = {Justus Ulbrich and Jan Nov{\'a}k and Hauke Rehfeld and Carsten Dachsbacher},
-  booktitle = {Proceedings of the Vision, Modeling, and Visualization Workshop},
-  editor    = {Michael M. Bronstein and Jean Favre and Kai Hormann},
-  year      = {2013},
-  pages     = {203--210},
-  location  = {Lugano, Switzerland},
-  publisher = {Eurographics Association}
-}</code>
-</pre>
-<p><img src="/publications/ProgressiveVisibilityCaching/teaser.png" alt="./teaser.png" title="./teaser.png"></p>
+<h1 id="citation">Citation</h1>
+<div class="sourceCode"><pre class="sourceCode bibtex"><code class="sourceCode bibtex"><span class="va">@inproceedings</span>{<span class="ot">Ulbrich2013PVC</span>,
+  <span class="dt">title</span>     = {Progressive Visibility Caching for Fast Indirect Illumination},
+  <span class="dt">author</span>    = {Justus Ulbrich and Jan Nov{<span class="ch">\&#39;</span>a}k and Hauke Rehfeld and Carsten Dachsbacher},
+  <span class="dt">booktitle</span> = {Proceedings of the Vision, Modeling, and Visualization Workshop},
+  <span class="dt">editor</span>    = {Michael M. Bronstein and Jean Favre and Kai Hormann},
+  <span class="dt">year</span>      = {2013},
+  <span class="dt">pages</span>     = {203--210},
+  <span class="dt">location</span>  = {Lugano, Switzerland},
+  <span class="dt">publisher</span> = {Eurographics Association}
+}</code></pre></div>
+<p><img src="/publications/ProgressiveVisibilityCaching/teaser.png" /></p>
 <p>Our visibility caching significantly speeds up tracing of secondary rays, here from 0.15 MRays/s (reference) to 0.70 MRays/s (with the visibility cache). The images were rendered using path tracing where some of the rays (highlighted by green in the illustrations; solid and dashed lines represent path segments and shadow rays, resp.) were traced using our visibility cache with 2000 shadow maps achieving 4.7× higher throughput of secondary rays per second.</p>
-<h2 id="org-header-3"><span class="org-section-number">3</span>Abstract</h2>
+<h1 id="abstract">Abstract</h1>
 <p>Rendering realistic images requires exploring the vast space of all possible paths that light can take between emitters and receivers. Thanks to the advances in rendering we can tackle this problem using different algorithms; but in general, we will likely be evaluating many expensive visibility queries. In this paper, we leverage the observation that certain kinds of visibility calculations do not need to be resolved exactly and results can be shared efficiently among similar queries. We present a visibility caching algorithm that significantly accelerates computation of diffuse and glossy inter-reflections. By estimating the visibility correlation between surface points, the cache automatically adapts to the scene geometry, placing more cache records in areas with rapidly changing visibility. We demonstrate that our approach is most suitable for progressive algorithms delivering approximate but fast previews as well as high quality converged results.</p>
-<h2 id="org-header-4"><span class="org-section-number">4</span>Video</h2>
-<video src="/publications/ProgressiveVisibilityCaching/PVCFID_video.mp4" controls="">
- <a href="/publications/ProgressiveVisibilityCaching/PVCFID_video.mp4">Download</a>
+<h1 id="video">Video</h1>
+<video src="PVCFID_video.mp4" controls>
+ <a href="PVCFID_video.mp4">Download</a>
 </video>
-    </article>
 
-        <footer>
-          <ul>
-            <li><a href="/impressum/">Impressum</a></li>
-            <li><a href="/impressum/datenschutz/">Datenschutzerklärung</a></li>
-            
-          </ul>
-        </footer>
+
+</article>
+	<footer>
+      <ul>
+        <li><a href="/impressum/">Impressum</a></li>
+        <li><a href="/impressum/datenschutz/">Datenschutzerklärung</a></li>
+      </ul>
+    </footer>
+	
   </body>
 </html>
-

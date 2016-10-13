@@ -3,89 +3,40 @@
   <head>
     <title>Projects</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Hauke Rehfeld" />
-	<meta name="viewport" content="width=device-width, initial-sclae=1" />
+    <meta name="author" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/media/css/main.css" type="text/css">
   	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Playfair+Display">
   	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
   </head>
-<body>
-      <header>
-        <nav>
-          <h1><a href="/">Hauke Rehfeld</a></h1>
-          <ul>
-            <li><a href="/publications">Publications</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/art">Art</a></li>
-            <li><a href="/photography">Photography</a></li>
-          </ul>
-          </nav>
-        </header>
-
-  <section> 
+  <body>
+    <header>
+      <nav>
+        <h1><a href="/">Hauke Rehfeld</a></h1>
+        <ul>
+          <li><a href="/publications/">Publications</a></li>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/art/">Art</a></li>
+          <li><a href="/photography/">Photography</a></li>
+        </ul>
+        </nav>
+      </header>  <section>   
 	<h1>Projects</h1>
       <article>
         <h2>
-            <a href="/projects/QuakeInjector">
-          QuakeInjector Package Manager
-            </a>
+          <a href="/projects/QuakeInjector">
+			QuakeInjector Package Manager
+          </a>
         </h2>
-          <p>Download, install and play quake singleplayer maps from the quaddicted.com archive</p>
-
-          <p>Quake Injector is a tool to <b>download, install and play</b> Quake (some call it "Quake 1") singleplayer maps from Spirit's <a href="https://www.quaddicted.com">Quaddicted archive</a> - basically the complete history of all quake singleplayer maps ever made. Ever been annoyed by an excruciating installation process? Could not figure out how to install a certain map? Well, this tool makes it a piece of cake. Simply pick a map and click Install.
-</p>
-<h2 id="org-header-1"><span class="org-section-number">1</span>Features</h2>
-<ul><li>Simply pick a map, click install and play</li>
-<li><a href="https://www.quaddicted.com/spmaps.html">All Quake singleplayer maps ever made</a>  (900+) in the database</li>
-<li>Filter, sort, browse to find your favourite map</li>
-<li>Automatically installs dependencies (e.g. Quoth)</li>
-<li>Cross-Platform</li>
-<li>Free &amp; Open Source Software, released under the GPL.</li>
-<li>Scan your Quake directory for already installed maps</li>
-</ul>
-<h2 id="org-header-2"><span class="org-section-number">2</span>Installation</h2>
-<p>Quake Injector requires <a href="https://www.java.com/en/download/">Java 6</a> and a Quake installation (<a href="http://tldp.org/HOWTO/Quake-HOWTO-2.html">Linux howto</a>, <a href="http://www.celephais.net/fitzquake/">modern Fitzquake engine</a>).</p>
-<ol><li>Make sure you have Java 6 installed,</li>
-<li>Download Quake Injector</li>
-<li>Extract the <code>.zip</code> file,</li>
-<li>Double click <code>quakeinjector.jar</code>, or simply start it with <code>java -jar quakeinjector.jar</code> from the extraction directory. On windows, you can also use the supplied `quakeinjector.bat`.<p>Do <b>not</b> launch it directly from your browser, your settings would be eaten by  a <a href="http://www.macguff.fr/goomi/unspeakable/vault299.html">friendly horde of Shoggies</a>, and the settings are vital to the program.</p>
-</li>
-</ol>
-<p><b>Keep in mind this software is still in heavy development. The alpha release suggests it not being feature complete, and possibly buggy.</b> See the included licence (`COPYING`) for more details on warranties, etc. (there are none).</p>
-<h2 id="org-header-3"><span class="org-section-number">3</span>Known Problems</h2>
-<ol><li>On <i>Linux/MacOS</i> and other case-sensitive operating systems you won’t have much joy as there is no engine that can ignore the case of filenames <b>yet</b>. There will be one and it will be a good one, but for now you're pretty much on your own, as <i>a lot of maps were packed with mixed case filenames</i> by the original authors.</li>
-<li>Also be aware that most engines cannot run some of the latest and greatest maps, because those <i>maps break the original quake engine limits</i>. <a href="http://www.celephais.net/fitzquake/">Fitzquake</a> is highly recommended.</li>
-</ol>
-<h2 id="org-header-4"><span class="org-section-number">4</span>Bug Reports, Help with Development, etc.</h2>
-<p>If anything that feels weird occurs to you, or you find a definite bug, please <a href="https://github.com/hrehfeld/QuakeInjector/issues">report it as an issue</a> or mail Spirit (spixrixt@quaxddixcted.com, remove all xs from that address) or Hauke (hreaaaahfeaaaald@uni-aaakobaalenz.de, remove all as from that address). Likewise, give us a shout if you want to help with development or package management (all the packages need testing).</p>
-<h2 id="org-header-5"><span class="org-section-number">5</span>Manual</h2>
-<h3 id="org-header-5-1"><span class="org-section-number">5.1</span>Filtering, Sorting and the Package Table</h3>
-<p>Right above the table of available packages you see a filter field. Here you can specify a filter for the listing. Let's say you want to see only maps from 2001? Enter "2001" (without the quotes). Or for all maps by Vondur, enter "Vondur". You can also enter multiple words, they will be connect by a logical AND. So "czg 2000" would show you all maps czg made in 2000. To reset the filter simply delete all text from it.</p>
-<p>At the top of the package list there are the table headers (duh!). Click on them to sort the table.</p>
-<p>This works well in combination with a filter. For example all maps from 2008 sorted by rating.</p>
-<p>The rightmost column marks the installation status, if there is a check then the package should be installed and ready to play.</p>
-<h2 id="org-header-6"><span class="org-section-number">6</span>Credits</h2>
-<ul><li>Spirit:<ul><li>idea</li>
-<li>database maintenance</li>
-<li>hosting</li>
-<li>feedback &amp; testing</li>
-</ul>
-</li>
-<li>Hauke Rehfeld:<ul><li>programming</li>
-</ul>
-</li>
-</ul>
-
+        <p>Download, install and play quake singleplayer maps from the quaddicted.com archive</p>
       </article>
   </section>
-
-      <footer>
-        <ul>
-          <li><a href="/impressum/">Impressum</a></li>
-          <li><a href="/impressum/datenschutz/">Datenschutzerklärung</a></li>
-          
-        </ul>
-      </footer>
-    </body>
-  </html>
-
+	<footer>
+      <ul>
+        <li><a href="/impressum/">Impressum</a></li>
+        <li><a href="/impressum/datenschutz/">Datenschutzerklärung</a></li>
+      </ul>
+    </footer>
+	
+  </body>
+</html>
