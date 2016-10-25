@@ -23,9 +23,10 @@
         </nav>
       </header><article>
   <h1>Progressive Visibility Caching for Fast Indirect Illumination</h1>
-  <p>Justus Ulbrich, <a href="http://drz.disneyresearch.com/~jnovak/">Jan Novak</a>, Hauke Rehfeld and <a href="http://cg.ivd.kit.edu/dachsbacher">Carsten Dachsbacher</a></p>
-  <p>Proceedings of International Workshop on Vision, Modeling, and Visualization (VMV’13)</p>
-  <h1 id="downloads">Downloads</h1>
+  <p>Justus Ulbrich, Jan Novak, Hauke Rehfeld and Carsten Dachsbacher</p>
+  <p>Proceedings of International Workshop on Vision, Modeling, and Visualization (VMV’13)  </p>
+  <div class="content">
+	<h1 id="downloads">Downloads</h1>
 <ul>
 <li><a href="./ProgressiveVisibilityCaching.pdf">Paper</a></li>
 <li><em>Supplementals</em></li>
@@ -41,7 +42,7 @@
   <span class="dt">location</span>  = {Lugano, Switzerland},
   <span class="dt">publisher</span> = {Eurographics Association}
 }</code></pre></div>
-<p><img src="/publications/ProgressiveVisibilityCaching/teaser.png" /></p>
+<img src="/publications/ProgressiveVisibilityCaching/teaser.png" class="16to9" />
 <p>Our visibility caching significantly speeds up tracing of secondary rays, here from 0.15 MRays/s (reference) to 0.70 MRays/s (with the visibility cache). The images were rendered using path tracing where some of the rays (highlighted by green in the illustrations; solid and dashed lines represent path segments and shadow rays, resp.) were traced using our visibility cache with 2000 shadow maps achieving 4.7× higher throughput of secondary rays per second.</p>
 <h1 id="abstract">Abstract</h1>
 <p>Rendering realistic images requires exploring the vast space of all possible paths that light can take between emitters and receivers. Thanks to the advances in rendering we can tackle this problem using different algorithms; but in general, we will likely be evaluating many expensive visibility queries. In this paper, we leverage the observation that certain kinds of visibility calculations do not need to be resolved exactly and results can be shared efficiently among similar queries. We present a visibility caching algorithm that significantly accelerates computation of diffuse and glossy inter-reflections. By estimating the visibility correlation between surface points, the cache automatically adapts to the scene geometry, placing more cache records in areas with rapidly changing visibility. We demonstrate that our approach is most suitable for progressive algorithms delivering approximate but fast previews as well as high quality converged results.</p>
@@ -51,6 +52,7 @@
 </video>
 
 
+  </div>
 </article>
 	<footer>
       <ul>
