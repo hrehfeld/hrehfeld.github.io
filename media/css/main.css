@@ -61,7 +61,7 @@ body {
     }
     @media screen and (min-width: 1200px) {
         body {
-            max-width: 80em;
+            max-width: calc(38rem * 2);
         }
         body article {
             columns: 2;
@@ -87,7 +87,7 @@ body {
 
         @media screen and (min-width: 1600px) {
             body {
-                max-width: 120em;
+                max-width: calc(38rem * 3);
             }
             body article {
                 columns: 3;
