@@ -22,11 +22,12 @@
         </ul>
         </nav>
       </header><article>
-  <h1>Object-order Ray Tracing for fully Dynamic Scenes</h1>
-  <p>Tobias Zirr, Hauke Rehfeld and Carsten Dachsbacher</p>
-  <p>Book Chapter in GPU Pro 5 (Editor: Wolfgang Engel)  </p>
-  <div class="content">
-	<h1 id="citation">Citation</h1>
+  <header>
+    <h1>Object-order Ray Tracing for fully Dynamic Scenes</h1>
+    <p>Tobias Zirr, Hauke Rehfeld and Carsten Dachsbacher</p>
+    <p>Book Chapter in GPU Pro 5 (Editor: Wolfgang Engel)    </p>
+  </header>
+  <h2 id="citation">Citation</h2>
 <div class="sourceCode"><pre class="sourceCode bibtex"><code class="sourceCode bibtex"><span class="va">@incollection</span>{<span class="ot">Zirr13</span>,
     <span class="dt">author</span>    = {Tobias Zirr and Hauke Rehfeld and Carsten Dachsbacher},
     <span class="dt">title</span>     = {Object-order Ray Tracing for fully Dynamic Scenes},
@@ -36,11 +37,10 @@
     <span class="dt">publisher</span> = {A K Peters/CRC Press},
     <span class="dt">address</span>   = {Boca Raton, FL, USA},
 }</code></pre></div>
-<img src="/publications/ObjectOrderRayTracing/teaser.png" class="16to9" />
-<h1 id="abstract">Abstract</h1>
+<img src="/publications/ObjectOrderRayTracing/teaser.png" class="a16to9" />
+<h2 id="abstract">Abstract</h2>
 <p>This article presents a method for tracing incoherent secondary rays that integrates well with existing rasterization-based real-time rendering engines. In particular, it requires only linear scene access and supports fully dynamic scene geometry. All parts of the method that work with scene geometry are implemented in the standard graphics pipeline. Thus, the ability to generate, transform and animate geometry via shaders is fully retained. Our method does not distinguish between static and dynamic geometry. Moreover, shading can share the same material system that is used in a deferred shading rasterizer. Consequently, our method allows for a unified rendering architecture that supports both rasterization and ray tracing. The more expensive ray tracing can easily be restricted to complex phenomena that require it, such as reflections and refractions on arbitrarily shaped scene geometry. Steps in rendering that do not require the tracing of incoherent rays with arbitrary origins can be dealt with using rasterization as usual.</p>
 
-  </div>
 </article>
 	<footer>
       <ul>

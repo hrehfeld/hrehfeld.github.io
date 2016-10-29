@@ -27,101 +27,123 @@
        -moz-box-sizing: border-box;
             box-sizing: border-box;
 }
-html, body {
+html {
     margin: 0;
     padding: 0;
-}
-html {
-    font-size: 62.5%;
-}
 
-html {
     font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 12pt;
+    line-height: 1.75;
     color: #111;
     background-color: #fff;
 }
 
-html > * {
+body {
+    margin: 0 auto;
     padding: 0;
+
+    max-width: 38em;
 }
 
 /* Responsive
    -------------------------------------------------- */
-html {
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-    font-size: 12pt;
-    line-height: 1.5;
-}
-
-
-body {
-    margin: 0 auto;
-    max-width: 40em;
-}
 
 @media screen and (min-width: 768px) {
-    /* Increase body padding and font-sizes */
     html {
-/*        padding: 30px; */
-        padding-left: 2em;
-        padding-right: 2em;
-        font-size: 12pt;
-        line-height: 1.75;
+        padding-left: 1em;
+        padding-right: 1em;
     }
-
 }
 
 @media screen and (min-width: 1024px) {
     html {
-        padding-left: 3em;
-        padding-right: 3em;
         font-size: 14pt;
     }
     @media screen and (min-width: 1200px) {
-        html {
-            padding-left: 1em;
-            padding-right: 1em;
-        }
         body {
-            margin: 0 auto;
-            max-width: 1360px;
+            max-width: 80em;
         }
-        body .content {
+        body article {
             columns: 2;
-            column-gap: 80px;
+            -moz-columns: 2;
+            -webkit-columns: 2;
+            column-gap: 0;
+            column-fill: 0;
+        }
+        article header {
+            column-span: all;
+            -moz-column-span: all;
+        }
+        article header + figure
+        , article header + img {
+        }
+        article * {
+            -webkit-margin-before: 0;
+            -webkit-margin-after: 0;
+        }
+        article > img, article > figure {
+            margin-bottom: 0;
         }
 
         @media screen and (min-width: 1600px) {
             body {
-                max-width: 2100px;
+                max-width: 120em;
             }
-            body .content {
+            body article {
                 columns: 3;
-                max-width: 2100px;
+                -moz-columns: 3;
+                -webkit-columns: 3;
             }
         }
     }
 }
 
-.content :first-child.group {
-    margin-top: 0;
-    
+
+section, article {
+    margin: 0;
+    max-width: none;
 }
-.content :last-child {
+
+header, footer, article > * {
+    margin-left: 1.5rem;
+/*    margin-right: 1.5rem; */
+    max-width: calc(100% - 3rem);
+}
+
+article > img, article > figure, article > *{
+    margin-top: 0;
+}
+article > img, article > figure, article > ul, article > ol, article > dl {
+    margin-bottom: 0;
+    padding-bottom: 1.5rem;
+}
+
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+    margin-top: 0.5rem;
+}
+
+
+header p {
+    font-style: italic;
 }
 
 p {
     max-width: 84em;
-    margin: 0 0 20px;
+    margin-bottom: 1em;
 }
 h1, h2, h3 {
     font-family: "Playfair Display", Georgia, serif;
     font-weight: bold;
-    line-height: 1.1;
+    line-height: 1.5;
     color: #000;
     text-rendering: optimizeLegibility;
     break-after: avoid;
+    margin-bottom: 0.5em;
+    margin-top: 1em;
+}
+
+h1 + h2, h2 + h3, h3 + h4, h4 + h5 {
+    margin-top: 0em;
 }
 
 /* disable org mode stuff */
@@ -142,13 +164,13 @@ h3 {
 }
 ul, ol {
     padding: 0;
-    margin: 0 0 20px 20px;
+    padding-left: 1.5em;
     list-style-type: disc;
 }
+
 code, pre {
     font-family: Menlo, Monaco, Consolas, "Dejavu Sans Mono", "Courier New", monospace;
     break-inside: avoid;
-
 }
 code {
     color: #d14;
@@ -177,8 +199,10 @@ blockquote p:last-child {
 }
 img {
     display: block;
-    margin: 0;
-/*    border-radius: 2px;*/
+    /*    border-radius: 2px;*/
+    break-inside: avoid;
+    page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
 }
 a {
     font-weight: inherit;
@@ -206,8 +230,7 @@ table th.right, table td.right {
 }
 /******************************************************/
 
-header {
-    margin: 0;
+body > header {
     padding: 0;
     color: #888;
 
@@ -234,6 +257,7 @@ nav h1 {
 nav ul {
     list-style: none;
     margin: 0;
+    padding: 0;
 }
 
 nav li {
@@ -241,28 +265,27 @@ nav li {
     margin-right: 0.5em;
 }
 @media screen and (min-width: 400px) {
-    nav  ul {
-        display: inline-block;
-        margin-left: 0.5em;
+    nav ul {
     }
 }
 @media screen and (min-width: 500px) {
     nav  ul {
-        display: inline-block;
-        margin-left: 1em;
     }
     nav li {
-        display: inline-block;
         margin-right: 1em;
     }
 }
 @media screen and (min-width: 550px) {
+    nav h1 {
+        margin-right: 2em;
+    }
+        
     nav  ul {
         display: inline-block;
-        margin-left: 2em;
     }
+}
+@media screen and (min-width: 650px) {
     nav li {
-        display: inline-block;
         margin-right: 1.5em;
     }
 }
@@ -309,11 +332,6 @@ article {
 }
 
 
-article img {
-    max-width: 100%;
-    margin-top: 2em;
-    margin-bottom: 2em;
-}
 
 article li {
     /**    list-style: none outside none; */
@@ -338,24 +356,37 @@ article-info + article-info:before {
 }
 
 figure {
-    margin: 2em 0;
+    padding: 0;
+    break-inside: avoid;
 }
-
-figure > img {
-    /*    width: 100%;*/
-    margin: 0;
+figcaption {
+    break-before: avoid;
+    break-inside: avoid;
+    font-style: italic;
+    margin-bottom: 1.5rem;
 }
 
 figure.group {
-    display: flex;
+/*    display: flex;
     align-items: flex-start;
-    margin-left: -2em;
-    max-width: calc(100% + 2em);
+*/
+    columns: 2;
+    -moz-columns: 2;
+    column-gap: 1.5rem;
+    -moz-column-gap: 1.5rem;
+
+    margin-right: 0;
+/*    max-width: calc(100% + 1.5rem);*/
 }
-figure.group > * {
-    margin-left: 2em;
-    width: calc(50% - 2em);
-    flex: 0 0;
+figure.group > img {
+    /*max-width: calc(50% - 0.75rem);*/
+    max-width: calc(100% - 0.75rem);
+    max-width: 100%;
+    margin: 0;
+
+}
+figure.group figcaption {
+    column-span: all;
 }
 
 footer {
